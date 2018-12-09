@@ -1,0 +1,89 @@
+{
+  "name": "tagfortag-frontend",
+  "description": "TODO: Write tagfortag-frontend description",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "author": "Michael Schwobe <mschwobe@gmail.com> (http://michaelschwobe.com)",
+  "repository": "github:michaelschwobe/tagfortag-frontend",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "react-scripts test",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
+    "react-scripts": "2.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-hooks": "^0.0.0",
+    "jest-dom": "^3.0.0",
+    "prettier": "^1.15.3",
+    "react-testing-library": "^5.3.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "extends": [
+      "airbnb",
+      "prettier",
+      "prettier/react"
+    ],
+    "plugins": [
+      "import",
+      "jsx-a11y",
+      "react",
+      "react-hooks",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "trailingComma": "all"
+        }
+      ],
+      "react-hooks/rules-of-hooks": "error",
+      "react/jsx-filename-extension": "off",
+      "react/no-children-prop": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.stories.js",
+          "*.test.js"
+        ],
+        "rules": {
+          "react/prop-types": "off"
+        }
+      }
+    ]
+  },
+  "eslintIgnore": [
+    "/coverage",
+    "/build",
+    "/public"
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
