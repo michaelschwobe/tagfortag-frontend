@@ -2,16 +2,16 @@ import React from 'react';
 import { cleanup, render } from 'react-testing-library';
 
 // Components.
-import Home from './Home';
+import UrlPage from './UrlPage';
 
 // -----------------------------------------------------------------------------
 
-describe('<Home>', () => {
+describe('<UrlPage>', () => {
   afterEach(cleanup);
 
   it('Renders to the DOM', () => {
-    render(<Home />);
+    render(<UrlPage />);
   });
 
-  // TODO: Write <Home /> tests.
+  // TODO: Write <UrlPage /> tests.
 });

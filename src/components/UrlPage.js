@@ -3,13 +3,13 @@ import React from 'react';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <Home /> component.
-const Home = () => <div>Home</div>;
+// TODO: Write <UrlPage /> component.
+const UrlPage = () => <div>UrlPage</div>;
 
-// Home.propTypes = {};
+// UrlPage.propTypes = {};
 
-// Home.defaultProps = {};
+// UrlPage.defaultProps = {};
 
 // -----------------------------------------------------------------------------
 
-export default Home;
+export default UrlPage;
