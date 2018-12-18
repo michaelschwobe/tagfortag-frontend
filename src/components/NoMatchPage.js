@@ -3,13 +3,13 @@ import React from 'react';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <NoMatch /> component.
-const NoMatch = () => <div>NoMatch</div>;
+// TODO: Write <NoMatchPage /> component.
+const NoMatchPage = () => <div>NoMatchPage</div>;
 
-// NoMatch.propTypes = {};
+// NoMatchPage.propTypes = {};
 
-// NoMatch.defaultProps = {};
+// NoMatchPage.defaultProps = {};
 
 // -----------------------------------------------------------------------------
 
-export default NoMatch;
+export default NoMatchPage;

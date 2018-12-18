@@ -2,16 +2,16 @@ import React from 'react';
 import { cleanup, render } from 'react-testing-library';
 
 // Components.
-import NoMatch from './NoMatch';
+import NoMatchPage from './NoMatchPage';
 
 // -----------------------------------------------------------------------------
 
-describe('<NoMatch>', () => {
+describe('<NoMatchPage>', () => {
   afterEach(cleanup);
 
   it('Renders to the DOM', () => {
-    render(<NoMatch />);
+    render(<NoMatchPage />);
   });
 
-  // TODO: Write <NoMatch /> tests.
+  // TODO: Write <NoMatchPage /> tests.
 });
