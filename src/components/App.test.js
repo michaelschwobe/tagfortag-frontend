@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, render } from 'react-testing-library';
+import { shallow } from 'enzyme';
 
 // Components.
 import App from './App';
@@ -7,10 +7,8 @@ import App from './App';
 // -----------------------------------------------------------------------------
 
 describe('<App>', () => {
-  afterEach(cleanup);
-
-  it('Renders to the DOM', () => {
-    render(<App />);
+  test('shallow render', () => {
+    shallow(<App />);
   });
 
   // TODO: Write <App /> tests.

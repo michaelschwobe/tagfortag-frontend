@@ -3,13 +3,13 @@ import React from 'react';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <UserSignInPage /> component.
-const UserSignInPage = () => <div>UserSignInPage</div>;
+// TODO: Write <SignInPage /> component.
+const SignInPage = () => <div>SignInPage</div>;
 
-// UserSignInPage.propTypes = {};
+// SignInPage.propTypes = {};
 
-// UserSignInPage.defaultProps = {};
+// SignInPage.defaultProps = {};
 
 // -----------------------------------------------------------------------------
 
-export default UserSignInPage;
+export default SignInPage;

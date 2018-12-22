@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link, Router } from '@reach/router';
+import { Link, Switch, Redirect, Route } from 'react-router-dom';
 
 // Pages.
 import NoMatchPage from './NoMatchPage';
 import SettingsPage from './SettingsPage';
+import SignInPage from './SignInPage';
 import TagPage from './TagPage';
 import UrlPage from './UrlPage';
-import UserSignInPage from './UserSignInPage';
 
 // -----------------------------------------------------------------------------
 
@@ -27,13 +27,14 @@ const App = () => (
         </li>
       </ul>
     </nav>
-    <Router>
-      <NoMatchPage default />
-      <SettingsPage path="settings" />
-      <TagPage path="tags/*" />
-      <UrlPage path="urls/*" />
-      <UserSignInPage path="signin" />
-    </Router>
+    <Switch>
+      <Redirect from="/" exact to="/urls" />
+      <Route path="/settings" component={SettingsPage} />
+      <Route path="/signin" component={SignInPage} />
+      <Route path="/tags" component={TagPage} />
+      <Route path="/urls" component={UrlPage} />
+      <Route component={NoMatchPage} />
+    </Switch>
   </div>
 );
 

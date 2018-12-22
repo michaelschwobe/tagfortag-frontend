@@ -1,7 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-// Adds custom Jest's assertions.
-import 'jest-dom/extend-expect';
+// -----------------------------------------------------------------------------
 
-// Removes rendered components from the document.body after each test.
-import 'react-testing-library/cleanup-after-each';
+// Adds Enzyme support to Jest.
+Enzyme.configure({ adapter: new Adapter() });

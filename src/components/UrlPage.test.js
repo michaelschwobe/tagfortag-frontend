@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, render } from 'react-testing-library';
+import { shallow } from 'enzyme';
 
 // Components.
 import UrlPage from './UrlPage';
@@ -7,10 +7,8 @@ import UrlPage from './UrlPage';
 // -----------------------------------------------------------------------------
 
 describe('<UrlPage>', () => {
-  afterEach(cleanup);
-
-  it('Renders to the DOM', () => {
-    render(<UrlPage />);
+  test('shallow render', () => {
+    shallow(<UrlPage />);
   });
 
   // TODO: Write <UrlPage /> tests.

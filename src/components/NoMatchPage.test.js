@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, render } from 'react-testing-library';
+import { shallow } from 'enzyme';
 
 // Components.
 import NoMatchPage from './NoMatchPage';
@@ -7,10 +7,8 @@ import NoMatchPage from './NoMatchPage';
 // -----------------------------------------------------------------------------
 
 describe('<NoMatchPage>', () => {
-  afterEach(cleanup);
-
-  it('Renders to the DOM', () => {
-    render(<NoMatchPage />);
+  test('shallow render', () => {
+    shallow(<NoMatchPage />);
   });
 
   // TODO: Write <NoMatchPage /> tests.

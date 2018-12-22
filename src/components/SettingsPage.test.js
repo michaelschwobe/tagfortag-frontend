@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, render } from 'react-testing-library';
+import { shallow } from 'enzyme';
 
 // Components.
 import SettingsPage from './SettingsPage';
@@ -7,10 +7,8 @@ import SettingsPage from './SettingsPage';
 // -----------------------------------------------------------------------------
 
 describe('<SettingsPage>', () => {
-  afterEach(cleanup);
-
-  it('Renders to the DOM', () => {
-    render(<SettingsPage />);
+  test('shallow render', () => {
+    shallow(<SettingsPage />);
   });
 
   // TODO: Write <SettingsPage /> tests.

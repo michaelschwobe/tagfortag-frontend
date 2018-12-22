@@ -2,14 +2,14 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Components.
-import Root from './Root';
+import SignInPage from './SignInPage';
 
 // -----------------------------------------------------------------------------
 
-describe('<Root>', () => {
+describe('<SignInPage>', () => {
   test('shallow render', () => {
-    shallow(<Root />);
+    shallow(<SignInPage />);
   });
 
-  // TODO: Write <Root /> tests.
+  // TODO: Write <SignInPage /> tests.
 });

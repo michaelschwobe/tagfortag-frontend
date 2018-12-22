@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, render } from 'react-testing-library';
+import { shallow } from 'enzyme';
 
 // Components.
 import TagPage from './TagPage';
@@ -7,10 +7,8 @@ import TagPage from './TagPage';
 // -----------------------------------------------------------------------------
 
 describe('<TagPage>', () => {
-  afterEach(cleanup);
-
-  it('Renders to the DOM', () => {
-    render(<TagPage />);
+  test('shallow render', () => {
+    shallow(<TagPage />);
   });
 
   // TODO: Write <TagPage /> tests.
