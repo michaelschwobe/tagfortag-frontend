@@ -3,13 +3,13 @@ import React from 'react';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <UrlPage /> component.
-const UrlPage = () => <div>UrlPage</div>;
+// TODO: Write <TagReadPage /> component.
+const TagReadPage = () => <div>TagReadPage</div>;
 
-// UrlPage.propTypes = {};
+// TagReadPage.propTypes = {};
 
-// UrlPage.defaultProps = {};
+// TagReadPage.defaultProps = {};
 
 // -----------------------------------------------------------------------------
 
-export default UrlPage;
+export default TagReadPage;

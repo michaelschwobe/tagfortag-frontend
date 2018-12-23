@@ -3,13 +3,13 @@ import React from 'react';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagPage /> component.
-const TagPage = () => <div>TagPage</div>;
+// TODO: Write <TagUpdatePage /> component.
+const TagUpdatePage = () => <div>TagUpdatePage</div>;
 
-// TagPage.propTypes = {};
+// TagUpdatePage.propTypes = {};
 
-// TagPage.defaultProps = {};
+// TagUpdatePage.defaultProps = {};
 
 // -----------------------------------------------------------------------------
 
-export default TagPage;
+export default TagUpdatePage;

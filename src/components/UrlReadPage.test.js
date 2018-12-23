@@ -2,14 +2,14 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Components.
-import UrlPage from './UrlPage';
+import UrlReadPage from './UrlReadPage';
 
 // -----------------------------------------------------------------------------
 
-describe('<UrlPage>', () => {
+describe('<UrlReadPage>', () => {
   test('shallow render', () => {
-    shallow(<UrlPage />);
+    shallow(<UrlReadPage />);
   });
 
-  // TODO: Write <UrlPage /> tests.
+  // TODO: Write <UrlReadPage /> tests.
 });

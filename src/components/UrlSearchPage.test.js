@@ -2,14 +2,14 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Components.
-import TagPage from './TagPage';
+import UrlSearchPage from './UrlSearchPage';
 
 // -----------------------------------------------------------------------------
 
-describe('<TagPage>', () => {
+describe('<UrlSearchPage>', () => {
   test('shallow render', () => {
-    shallow(<TagPage />);
+    shallow(<UrlSearchPage />);
   });
 
-  // TODO: Write <TagPage /> tests.
+  // TODO: Write <UrlSearchPage /> tests.
 });

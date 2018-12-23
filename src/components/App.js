@@ -5,8 +5,16 @@ import { Link, Switch, Redirect, Route } from 'react-router-dom';
 import NoMatchPage from './NoMatchPage';
 import SettingsPage from './SettingsPage';
 import SignInPage from './SignInPage';
-import TagPage from './TagPage';
-import UrlPage from './UrlPage';
+import TagCreatePage from './TagCreatePage';
+import TagMergePage from './TagMergePage';
+import TagReadPage from './TagReadPage';
+import TagSearchPage from './TagSearchPage';
+import TagUpdatePage from './TagUpdatePage';
+import UrlCreatePage from './UrlCreatePage';
+import UrlMergePage from './UrlMergePage';
+import UrlReadPage from './UrlReadPage';
+import UrlSearchPage from './UrlSearchPage';
+import UrlUpdatePage from './UrlUpdatePage';
 
 // -----------------------------------------------------------------------------
 
@@ -29,10 +37,23 @@ const App = () => (
     </nav>
     <Switch>
       <Redirect from="/" exact to="/urls" />
-      <Route path="/settings" component={SettingsPage} />
+
       <Route path="/signin" component={SignInPage} />
-      <Route path="/tags" component={TagPage} />
-      <Route path="/urls" component={UrlPage} />
+
+      <Route path="/urls" exact component={UrlSearchPage} />
+      <Route path="/urls/new" component={UrlCreatePage} />
+      <Route path="/urls/:urlId/edit" component={UrlUpdatePage} />
+      <Route path="/urls/:urlId/merge" component={UrlMergePage} />
+      <Route path="/urls/:urlId" component={UrlReadPage} />
+
+      <Route path="/tags" exact component={TagSearchPage} />
+      <Route path="/tags/new" component={TagCreatePage} />
+      <Route path="/tags/:tagId/edit" component={TagUpdatePage} />
+      <Route path="/tags/:tagId/merge" component={TagMergePage} />
+      <Route path="/tags/:tagId" component={TagReadPage} />
+
+      <Route path="/settings" component={SettingsPage} />
+
       <Route component={NoMatchPage} />
     </Switch>
   </div>
