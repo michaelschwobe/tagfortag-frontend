@@ -8,7 +8,7 @@ import TagUpdatePage from './TagUpdatePage';
 
 describe('<TagUpdatePage>', () => {
   test('shallow render', () => {
-    shallow(<TagUpdatePage />);
+    shallow(<TagUpdatePage match={{ params: {} }} />);
   });
 
   // TODO: Write <TagUpdatePage /> tests.

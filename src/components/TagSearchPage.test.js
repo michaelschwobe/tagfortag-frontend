@@ -8,7 +8,7 @@ import TagSearchPage from './TagSearchPage';
 
 describe('<TagSearchPage>', () => {
   test('shallow render', () => {
-    shallow(<TagSearchPage />);
+    shallow(<TagSearchPage location={{ search: '' }} />);
   });
 
   // TODO: Write <TagSearchPage /> tests.

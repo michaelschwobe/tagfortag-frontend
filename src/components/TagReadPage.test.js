@@ -8,7 +8,7 @@ import TagReadPage from './TagReadPage';
 
 describe('<TagReadPage>', () => {
   test('shallow render', () => {
-    shallow(<TagReadPage />);
+    shallow(<TagReadPage match={{ params: {} }} />);
   });
 
   // TODO: Write <TagReadPage /> tests.

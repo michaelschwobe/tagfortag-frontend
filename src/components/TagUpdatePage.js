@@ -1,12 +1,22 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 // -----------------------------------------------------------------------------
 
 // TODO: Write <TagUpdatePage /> component.
-const TagUpdatePage = () => <div>TagUpdatePage</div>;
+const TagUpdatePage = ({ match }) => {
+  const { tagId } = match.params;
 
-// TagUpdatePage.propTypes = {};
+  return <div>TagUpdatePage tagId: {tagId}</div>;
+};
+
+TagUpdatePage.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      tagId: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
+};
 
 // TagUpdatePage.defaultProps = {};
 

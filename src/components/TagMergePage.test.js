@@ -8,7 +8,7 @@ import TagMergePage from './TagMergePage';
 
 describe('<TagMergePage>', () => {
   test('shallow render', () => {
-    shallow(<TagMergePage />);
+    shallow(<TagMergePage match={{ params: {} }} />);
   });
 
   // TODO: Write <TagMergePage /> tests.
