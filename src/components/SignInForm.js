@@ -5,16 +5,15 @@ import * as Yup from 'yup';
 
 // -----------------------------------------------------------------------------
 
-export const initialValues = { email: '', password: '' };
-
 export const validationSchema = Yup.object().shape({
   email: Yup.string()
-    .required('Email is required.')
-    .email('Email format is invalid.'),
+    .label('Email')
+    .required()
+    .email('Email must be a valid format.'),
   password: Yup.string()
-    .required('Password is required.')
-    .min(8, 'Password length must be at least 8 characters.')
-    .max(50, 'Password length cannot exceed 50 characters.'),
+    .label('Password')
+    .required()
+    .min(8),
 });
 
 // TODO: Replace with `signIn` Mutation.
@@ -25,11 +24,7 @@ export const signIn = (values, actions) => {
   }, 600);
 };
 
-// TODO: Write <Title /> component.
-// TODO: Write <FormRow /> component.
-// TODO: Write <Label /> component.
-// TODO: Write <FieldError /> component.
-// TODO: Remove eslint rules.
+// TODO: Remove eslint rules after elements are replaced with components.
 /*
   eslint-disable
     jsx-a11y/label-has-associated-control,
@@ -37,7 +32,7 @@ export const signIn = (values, actions) => {
     react/require-default-props,
     react/default-props-match-prop-types
  */
-const SignInForm = ({ onSubmit }) => (
+const SignInForm = ({ initialValues, onSubmit }) => (
   <Formik
     initialValues={initialValues}
     validationSchema={validationSchema}
@@ -56,27 +51,27 @@ const SignInForm = ({ onSubmit }) => (
 
         <p>
           <label htmlFor="email">
-            <span>Email: </span>
+            <span>Email:</span>{' '}
             <strong>
               <abbr title="required">*</abbr>
             </strong>
-          </label>
-          <Field type="email" id="email" name="email" required />
-          <ErrorMessage name="email" component="div" />
+          </label>{' '}
+          <Field type="email" id="email" name="email" required />{' '}
+          <ErrorMessage component="span" name="email" />
         </p>
         <p>
           <label htmlFor="password">
-            <span>Password: </span>
+            <span>Password:</span>{' '}
             <strong>
               <abbr title="required">*</abbr>
             </strong>
-          </label>
-          <Field type="password" id="password" name="password" required />
-          <ErrorMessage name="password" component="div" />
+          </label>{' '}
+          <Field type="password" id="password" name="password" required />{' '}
+          <ErrorMessage component="span" name="password" />
         </p>
         <p>
           <button type="submit" disabled={isSubmitting}>
-            Submit
+            Sign In
           </button>
         </p>
       </Form>
@@ -85,10 +80,18 @@ const SignInForm = ({ onSubmit }) => (
 );
 
 SignInForm.propTypes = {
+  initialValues: PropTypes.shape({
+    email: PropTypes.string,
+    password: PropTypes.string,
+  }).isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
 
 SignInForm.defaultProps = {
+  initialValues: {
+    email: '',
+    password: '',
+  },
   onSubmit: signIn,
 };
 
