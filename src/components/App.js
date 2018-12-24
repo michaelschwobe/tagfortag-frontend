@@ -42,14 +42,14 @@ const App = () => (
 
       <Route path="/urls" exact component={UrlSearchPage} />
       <Route path="/urls/new" component={UrlCreatePage} />
+      <Route path="/urls/merge" component={UrlMergePage} />
       <Route path="/urls/:urlId/edit" component={UrlUpdatePage} />
-      <Route path="/urls/:urlId/merge" component={UrlMergePage} />
       <Route path="/urls/:urlId" component={UrlReadPage} />
 
       <Route path="/tags" exact component={TagSearchPage} />
       <Route path="/tags/new" component={TagCreatePage} />
+      <Route path="/tags/merge" component={TagMergePage} />
       <Route path="/tags/:tagId/edit" component={TagUpdatePage} />
-      <Route path="/tags/:tagId/merge" component={TagMergePage} />
       <Route path="/tags/:tagId" component={TagReadPage} />
 
       <Route path="/settings" component={SettingsPage} />

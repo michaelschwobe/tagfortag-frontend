@@ -7,19 +7,23 @@ describe('routerUtils', () => {
   describe('getSearchParams', () => {
     test('returns default values', () => {
       expect(getSearchParams()).toEqual({
-        queries: [],
-        filters: [],
-        sequences: [],
+        searchTerm: '',
+        searchFilter: [],
+        searchSort: [],
+        mergeFrom: '',
+        mergeInto: '',
       });
     });
 
     test('returns custom values', () => {
       expect(
-        getSearchParams('?q=q1,q2&f=f1,f2&s=s1,s2&someKey=someValue'),
+        getSearchParams('?q=q&f=f1,f2&s=s1,s2&a=a&b=b&someKey=someValue'),
       ).toEqual({
-        queries: ['q1', 'q2'],
-        filters: ['f1', 'f2'],
-        sequences: ['s1', 's2'],
+        searchTerm: 'q',
+        searchFilter: ['f1', 'f2'],
+        searchSort: ['s1', 's2'],
+        mergeFrom: 'a',
+        mergeInto: 'b',
       });
     });
   });

@@ -8,15 +8,17 @@ import { getSearchParams } from '../utils/routerUtils';
 
 // TODO: Write <TagSearchPage /> component.
 const TagSearchPage = ({ location }) => {
-  const { search } = location;
-  const { queries, filters, sequences } = getSearchParams(search);
+  // Parse query params for initial form values.
+  const { searchTerm, searchFilter, searchSort } = getSearchParams(
+    location.search,
+  );
 
   return (
     <div>
       <div>TagSearchPage</div>
-      <div>queries: {queries}</div>
-      <div>filters: {filters}</div>
-      <div>sequences: {sequences}</div>
+      <div>searchTerm: {searchTerm}</div>
+      <div>searchFilter: {searchFilter}</div>
+      <div>searchSort: {searchSort}</div>
     </div>
   );
 };

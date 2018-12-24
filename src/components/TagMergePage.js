@@ -1,20 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Utils.
+import { getSearchParams } from '../utils/routerUtils';
+
+// Local modules.
+import TagMergeForm from './TagMergeForm';
+
 // -----------------------------------------------------------------------------
 
 // TODO: Write <TagMergePage /> component.
-const TagMergePage = ({ match }) => {
-  const { tagId } = match.params;
+const TagMergePage = ({ location }) => {
+  // Parse query params for initial form values.
+  const { mergeFrom, mergeInto } = getSearchParams(location.search);
+  const initialValues = { from: mergeFrom, into: mergeInto };
 
-  return <div>TagMergePage tagId: {tagId}</div>;
+  return (
+    <div>
+      <TagMergeForm initialValues={initialValues} />
+    </div>
+  );
 };
 
 TagMergePage.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      tagId: PropTypes.string,
-    }).isRequired,
+  location: PropTypes.shape({
+    search: PropTypes.string.isRequired,
   }).isRequired,
 };
 
