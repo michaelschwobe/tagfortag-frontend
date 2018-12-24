@@ -2,14 +2,14 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Components.
-import UrlCreatePage from './UrlCreatePage';
+import BookmarkSearchPage from './BookmarkSearchPage';
 
 // -----------------------------------------------------------------------------
 
-describe('<UrlCreatePage>', () => {
+describe('<BookmarkSearchPage>', () => {
   test('shallow render', () => {
-    shallow(<UrlCreatePage />);
+    shallow(<BookmarkSearchPage />);
   });
 
-  // TODO: Write <UrlCreatePage /> tests.
+  // TODO: Write <BookmarkSearchPage /> tests.
 });

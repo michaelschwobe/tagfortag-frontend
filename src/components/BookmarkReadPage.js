@@ -3,13 +3,13 @@ import React from 'react';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <UrlSearchPage /> component.
-const UrlSearchPage = () => <div>UrlSearchPage</div>;
+// TODO: Write <BookmarkReadPage /> component.
+const BookmarkReadPage = () => <div>BookmarkReadPage</div>;
 
-// UrlSearchPage.propTypes = {};
+// BookmarkReadPage.propTypes = {};
 
-// UrlSearchPage.defaultProps = {};
+// BookmarkReadPage.defaultProps = {};
 
 // -----------------------------------------------------------------------------
 
-export default UrlSearchPage;
+export default BookmarkReadPage;

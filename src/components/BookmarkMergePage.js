@@ -3,13 +3,13 @@ import React from 'react';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <UrlCreatePage /> component.
-const UrlCreatePage = () => <div>UrlCreatePage</div>;
+// TODO: Write <BookmarkMergePage /> component.
+const BookmarkMergePage = () => <div>BookmarkMergePage</div>;
 
-// UrlCreatePage.propTypes = {};
+// BookmarkMergePage.propTypes = {};
 
-// UrlCreatePage.defaultProps = {};
+// BookmarkMergePage.defaultProps = {};
 
 // -----------------------------------------------------------------------------
 
-export default UrlCreatePage;
+export default BookmarkMergePage;
