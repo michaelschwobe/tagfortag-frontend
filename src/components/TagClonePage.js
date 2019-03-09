@@ -2,23 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Local modules.
-import TagMergeForm from './TagMergeForm';
+import TagCloneForm from './TagCloneForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagMergePage /> component.
-const TagMergePage = ({ match }) => {
+// TODO: Write <TagClonePage /> component.
+const TagClonePage = ({ match }) => {
   const { tagId } = match.params;
   const initialValues = { currId: tagId };
 
   return (
     <div>
-      <TagMergeForm initialValues={initialValues} />
+      <TagCloneForm initialValues={initialValues} />
     </div>
   );
 };
 
-TagMergePage.propTypes = {
+TagClonePage.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
       tagId: PropTypes.string,
@@ -26,8 +26,8 @@ TagMergePage.propTypes = {
   }).isRequired,
 };
 
-// TagMergePage.defaultProps = {};
+// TagClonePage.defaultProps = {};
 
 // -----------------------------------------------------------------------------
 
-export default TagMergePage;
+export default TagClonePage;

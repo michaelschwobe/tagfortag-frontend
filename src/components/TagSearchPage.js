@@ -17,8 +17,8 @@ const TagSearchPage = ({ location }) => {
     <div>
       <div>TagSearchPage</div>
       <div>searchTerm: {searchTerm}</div>
-      <div>searchFilter: {searchFilter}</div>
-      <div>searchSort: {searchSort}</div>
+      <div>searchFilter: {JSON.stringify(searchFilter, null, 2)}</div>
+      <div>searchSort: {JSON.stringify(searchSort, null, 2)}</div>
     </div>
   );
 };

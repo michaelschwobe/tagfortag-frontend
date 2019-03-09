@@ -7,20 +7,19 @@ export const getSearchParams = (search = '') => {
     q: 'searchTerm',
     f: 'searchFilter',
     s: 'searchSort',
-    a: 'mergeFrom',
-    b: 'mergeInto',
   };
 
-  const keysWithArrayAsOutput = ['f', 's'];
+  // Keys with comma delimited values.
+  const iterableKeys = ['f', 's'];
 
   return Object.entries(keyMap).reduce((acc, [prevKey, nextKey]) => {
     // Get and ensure param is a String.
     let nextValue = SearchParams.get(prevKey) || '';
 
     // Check if param should be output as an Array.
-    if (keysWithArrayAsOutput.includes(prevKey)) {
+    if (iterableKeys.includes(prevKey)) {
       // Ensure Array has valid values.
-      nextValue = nextValue.split(',').filter(el => el);
+      nextValue = nextValue.split(',').filter(el => el != null);
     }
 
     // Create object with array values.

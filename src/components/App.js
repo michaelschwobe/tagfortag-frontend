@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Switch, Redirect, Route } from 'react-router-dom';
 
 // Pages.
+import BookmarkClonePage from './BookmarkClonePage';
 import BookmarkCreatePage from './BookmarkCreatePage';
 import BookmarkMergePage from './BookmarkMergePage';
 import BookmarkReadPage from './BookmarkReadPage';
@@ -10,6 +11,7 @@ import BookmarkUpdatePage from './BookmarkUpdatePage';
 import NoMatchPage from './NoMatchPage';
 import SettingsPage from './SettingsPage';
 import SignInPage from './SignInPage';
+import TagClonePage from './TagClonePage';
 import TagCreatePage from './TagCreatePage';
 import TagMergePage from './TagMergePage';
 import TagReadPage from './TagReadPage';
@@ -56,13 +58,16 @@ const App = () => (
           <Link to="/bookmarks/new">BookmarkCreatePage</Link>
         </li>
         <li>
-          <Link to="/bookmarks/xxx">BookmarkReadPage</Link>
-        </li>
-        <li>
           <Link to="/bookmarks/xxx/edit">BookmarkUpdatePage</Link>
         </li>
         <li>
-          <Link to="/bookmarks/merge?a=a&b=b">BookmarkMergePage</Link>
+          <Link to="/bookmarks/xxx/clone">BookmarkClonePage</Link>
+        </li>
+        <li>
+          <Link to="/bookmarks/xxx/merge">BookmarkMergePage</Link>
+        </li>
+        <li>
+          <Link to="/bookmarks/xxx">BookmarkReadPage</Link>
         </li>
         <br />
         <li>
@@ -72,13 +77,16 @@ const App = () => (
           <Link to="/tags/new">TagCreatePage</Link>
         </li>
         <li>
-          <Link to="/tags/xxx">TagReadPage</Link>
-        </li>
-        <li>
           <Link to="/tags/xxx/edit">TagUpdatePage</Link>
         </li>
         <li>
-          <Link to="/tags/merge?a=a&b=b">TagMergePage</Link>
+          <Link to="/tags/xxx/clone">TagClonePage</Link>
+        </li>
+        <li>
+          <Link to="/tags/xxx/merge">TagMergePage</Link>
+        </li>
+        <li>
+          <Link to="/tags/xxx">TagReadPage</Link>
         </li>
         <br />
         <li>
@@ -97,17 +105,25 @@ const App = () => (
 
       <Route path="/bookmarks" exact component={BookmarkSearchPage} />
       <Route path="/bookmarks/new" component={BookmarkCreatePage} />
-      <Route path="/bookmarks/merge" component={BookmarkMergePage} />
       <Route
         path="/bookmarks/:bookmarkId/edit"
         component={BookmarkUpdatePage}
+      />
+      <Route
+        path="/bookmarks/:bookmarkId/clone"
+        component={BookmarkClonePage}
+      />
+      <Route
+        path="/bookmarks/:bookmarkId/merge"
+        component={BookmarkMergePage}
       />
       <Route path="/bookmarks/:bookmarkId" component={BookmarkReadPage} />
 
       <Route path="/tags" exact component={TagSearchPage} />
       <Route path="/tags/new" component={TagCreatePage} />
-      <Route path="/tags/merge" component={TagMergePage} />
       <Route path="/tags/:tagId/edit" component={TagUpdatePage} />
+      <Route path="/tags/:tagId/clone" component={TagClonePage} />
+      <Route path="/tags/:tagId/merge" component={TagMergePage} />
       <Route path="/tags/:tagId" component={TagReadPage} />
 
       <Route path="/settings" component={SettingsPage} />

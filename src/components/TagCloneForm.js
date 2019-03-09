@@ -14,8 +14,8 @@ export const validationSchema = Yup.object().shape({
     .required(),
 });
 
-// TODO: Replace with `mergeTag` Mutation.
-export const mergeTag = (values, actions) => {
+// TODO: Replace with `cloneTag` Mutation.
+export const cloneTag = (values, actions) => {
   setTimeout(() => {
     console.log('⚡️ values', JSON.stringify(values, null, 2)); // eslint-disable-line no-console
     actions.setSubmitting(false);
@@ -30,7 +30,7 @@ export const mergeTag = (values, actions) => {
     react/require-default-props,
     react/default-props-match-prop-types
  */
-const TagMergeForm = ({ initialValues, onSubmit }) => (
+const TagCloneForm = ({ initialValues, onSubmit }) => (
   <Formik
     initialValues={initialValues}
     validationSchema={validationSchema}
@@ -38,7 +38,7 @@ const TagMergeForm = ({ initialValues, onSubmit }) => (
   >
     {({ isSubmitting }) => (
       <Form>
-        <h1>Merge Tag</h1>
+        <h1>Clone Tag</h1>
         <p>
           Required fields are followed by{' '}
           <strong>
@@ -78,7 +78,7 @@ const TagMergeForm = ({ initialValues, onSubmit }) => (
         </p>
         <p>
           <button type="submit" disabled={isSubmitting}>
-            Merge Tag
+            Clone Tag
           </button>
         </p>
       </Form>
@@ -86,7 +86,7 @@ const TagMergeForm = ({ initialValues, onSubmit }) => (
   </Formik>
 );
 
-TagMergeForm.propTypes = {
+TagCloneForm.propTypes = {
   initialValues: PropTypes.shape({
     currId: PropTypes.string,
     nextId: PropTypes.string,
@@ -94,14 +94,14 @@ TagMergeForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 
-TagMergeForm.defaultProps = {
+TagCloneForm.defaultProps = {
   initialValues: {
     currId: '',
     nextId: '',
   },
-  onSubmit: mergeTag,
+  onSubmit: cloneTag,
 };
 
 // -----------------------------------------------------------------------------
 
-export default TagMergeForm;
+export default TagCloneForm;

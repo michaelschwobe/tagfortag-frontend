@@ -2,14 +2,14 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Components.
-import TagMergePage from './TagMergePage';
+import TagCloneForm from './TagCloneForm';
 
 // -----------------------------------------------------------------------------
 
-describe('<TagMergePage>', () => {
+describe('<TagCloneForm>', () => {
   test('shallow render', () => {
-    shallow(<TagMergePage match={{ params: {} }} />);
+    shallow(<TagCloneForm />);
   });
 
-  // TODO: Write <TagMergePage /> tests.
+  // TODO: Write <TagCloneForm /> tests.
 });
