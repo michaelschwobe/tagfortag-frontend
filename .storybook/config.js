@@ -1,20 +1,22 @@
-import { addDecorator, configure } from '@storybook/react';
-import { withOptions } from '@storybook/addon-options';
+import { addParameters, configure } from '@storybook/react';
+import { create } from '@storybook/theming';
 
 // -----------------------------------------------------------------------------
 
-addDecorator(
-  /**
-   * (Re-)configure Storybook UI at runtime.
-   * @link https://www.npmjs.com/package/@storybook/addon-options
-   */
-  withOptions({
-    name: 'TagForTag',
-    showAddonPanel: true,
-    addonPanelInRight: true,
-    // selectedAddonPanel: 'storybooks/storybook-addon-knobs',
-  }),
-);
+/**
+ * (Re-)configure Storybook UI at runtime.
+ * @link https://www.npmjs.com/package/@storybook/theming
+ */
+addParameters({
+  options: {
+    theme: create({
+      base: 'light',
+      brandTitle: 'TagForTag',
+    }),
+    showPanel: true,
+    panelPosition: 'right',
+  },
+});
 
 // Automatically import all files ending in `*.stories.js` within `src/`.
 const req = require.context('../src', true, /.stories\.js$/);
