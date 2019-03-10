@@ -2,9 +2,9 @@ const mapSearchParams = (search = '') => {
   const SearchParams = new URLSearchParams(search);
 
   const keyMap = {
-    q: 'searchTerm',
-    f: 'searchFilter',
-    s: 'searchSort',
+    q: 'term',
+    f: 'filters',
+    s: 'sorts',
   };
 
   // Keys with comma delimited values.
@@ -17,7 +17,7 @@ const mapSearchParams = (search = '') => {
     // Check if param should be output as an Array.
     if (iterableKeys.includes(prevKey)) {
       // Ensure Array has valid values.
-      nextValue = nextValue.split(',').filter(el => el != null);
+      nextValue = nextValue.split(',').filter(el => el);
     }
 
     // Create object with array values.
