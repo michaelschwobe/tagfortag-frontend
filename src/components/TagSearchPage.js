@@ -2,16 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Utils.
-import { getSearchParams } from '../utils/routerUtils';
+import mapSearchParams from '../utils/mapSearchParams';
 
 // -----------------------------------------------------------------------------
 
 // TODO: Write <TagSearchPage /> component.
 const TagSearchPage = ({ location }) => {
   // Parse query params for initial form values.
-  const { searchTerm, searchFilter, searchSort } = getSearchParams(
-    location.search,
-  );
+  const { searchTerm, searchFilter, searchSort } = mapSearchParams(location.search);
 
   return (
     <div>

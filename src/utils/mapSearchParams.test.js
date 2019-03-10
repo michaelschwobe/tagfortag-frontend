@@ -1,12 +1,12 @@
 // Local modules.
-import { getSearchParams } from './routerUtils';
+import mapSearchParams from './mapSearchParams';
 
 // -----------------------------------------------------------------------------
 
 describe('routerUtils', () => {
-  describe('getSearchParams', () => {
+  describe('mapSearchParams', () => {
     test('returns default values', () => {
-      expect(getSearchParams()).toEqual({
+      expect(mapSearchParams()).toEqual({
         searchTerm: '',
         searchFilter: [],
         searchSort: [],
@@ -14,7 +14,7 @@ describe('routerUtils', () => {
     });
 
     test('returns custom values', () => {
-      expect(getSearchParams('?q=q&f=f1,f2&s=s1,s2&someKey=someValue')).toEqual(
+      expect(mapSearchParams('?q=q&f=f1,f2&s=s1,s2&someKey=someValue')).toEqual(
         {
           searchTerm: 'q',
           searchFilter: ['f1', 'f2'],

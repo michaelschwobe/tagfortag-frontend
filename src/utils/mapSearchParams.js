@@ -1,6 +1,4 @@
-// TODO: Remove eslint rules.
-/* eslint-disable import/prefer-default-export */
-export const getSearchParams = (search = '') => {
+const mapSearchParams = (search = '') => {
   const SearchParams = new URLSearchParams(search);
 
   const keyMap = {
@@ -26,3 +24,5 @@ export const getSearchParams = (search = '') => {
     return { ...acc, [nextKey]: nextValue };
   }, {});
 };
+
+export default mapSearchParams;
