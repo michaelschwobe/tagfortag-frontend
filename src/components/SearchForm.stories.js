@@ -9,17 +9,20 @@ import SearchForm from './SearchForm';
 
 // -----------------------------------------------------------------------------
 
-const initialValues = {
-  term: '',
-};
-
 // TODO: Write <SearchForm /> stories.
 storiesOf('SearchForm', module)
   .addDecorator(withInfo) // Must be first!
   .addDecorator(withKnobs)
   .add('default', () => (
     <SearchForm
-      initialValues={object('initialValues', initialValues)}
+      initialValues={{ term: '' }}
+      handleTerm={action('handleTerm')}
+      handleReset={action('handleReset')}
+    />
+  ))
+  .add('initialValues', () => (
+    <SearchForm
+      initialValues={object('initialValues', { term: 'q' })}
       handleTerm={action('handleTerm')}
       handleReset={action('handleReset')}
     />

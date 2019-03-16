@@ -12,8 +12,8 @@ const SearchForm = ({ initialValues, handleTerm, handleReset }) => (
         type="search"
         id="term"
         name="term"
-        placeholder="search for..."
-        value={initialValues.term}
+        placeholder="Search for..."
+        value={initialValues.term || ''}
         onChange={handleTerm}
       />
     </label>

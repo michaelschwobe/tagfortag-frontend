@@ -13,12 +13,15 @@ import TagSearchResultsItem from './TagSearchResultsItem';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write `getTags` Query (default: []).
-const getTags = () => [
-  { id: 'xxx', name: 'tagX', count: 2 },
-  { id: 'yyy', name: 'tagY', count: 1 },
-  { id: 'zzz', name: 'tagZ' },
-];
+// TODO: Write `getTags` Query.
+// Failure: `{ status, message }`
+// Success: `[{ id: 'xxx', name: 'tagX', count: 2 }, ...]`
+const getTags = () =>
+  Array.from({ length: 1000 }, (el, idx) => ({
+    id: `${idx}`,
+    name: `tag${idx}`,
+    count: Math.floor(Math.random() * 30) + 0,
+  }));
 
 // TODO: Write <TagSearchPage /> component.
 const TagSearchPage = ({ location }) => {
@@ -32,7 +35,7 @@ const TagSearchPage = ({ location }) => {
   const { term, setTerm, resetForm } = useSearchForm(searchParams);
 
   // Custom hook for <SearchResults> that optimizes search results.
-  const searchResultsItems = useSearchResults({
+  const searchResults = useSearchResults({
     candidates: tags,
     query: term,
     options: {
@@ -50,8 +53,9 @@ const TagSearchPage = ({ location }) => {
         handleReset={resetForm}
       />
       <SearchResults
+        value={term}
+        items={searchResults}
         itemComponent={TagSearchResultsItem}
-        items={searchResultsItems}
       />
     </div>
   );
