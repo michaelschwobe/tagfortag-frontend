@@ -1,19 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Local modules.
+// Components.
 import TagUpdateForm from './TagUpdateForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagUpdatePage /> component.
+// TODO: Write `getTag` query.
+const getTag = tagId => ({
+  id: tagId,
+  name: 'tagX',
+  count: 3,
+  createdAt: new Date(Date.now()).toDateString(),
+  updatedAt: new Date(Date.now()).toDateString(),
+});
+
+// TODO: Update <TagUpdatePage /> component with `getTag`.
 const TagUpdatePage = ({ match }) => {
   const { tagId } = match.params;
+  const tag = getTag(tagId);
 
   return (
     <div>
-      <div>TagUpdatePage tagId: {tagId}</div>
-      <TagUpdateForm initialValues={{ name: '' }} />
+      <TagUpdateForm initialValues={tag} />
     </div>
   );
 };

@@ -9,7 +9,6 @@ import TagMergeForm from './TagMergeForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagMergeForm /> stories.
 storiesOf('TagMergeForm', module)
   .addDecorator(withInfo) // Must be first!
   .addDecorator(withKnobs)

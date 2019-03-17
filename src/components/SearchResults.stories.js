@@ -16,7 +16,6 @@ const Item = props => (
   </pre>
 );
 
-// TODO: Write <SearchResults /> stories.
 storiesOf('SearchResults', module)
   .addDecorator(withInfo) // Must be first!
   .addDecorator(withKnobs)

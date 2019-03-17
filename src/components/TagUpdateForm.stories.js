@@ -9,7 +9,6 @@ import TagUpdateForm from './TagUpdateForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagUpdateForm /> stories.
 storiesOf('TagUpdateForm', module)
   .addDecorator(withInfo) // Must be first!
   .addDecorator(withKnobs)

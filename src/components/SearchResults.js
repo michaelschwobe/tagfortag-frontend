@@ -6,7 +6,6 @@ import SearchResultsHelp from './SearchResultsHelp';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <SearchResults /> component.
 const SearchResults = ({ value, items, itemComponent: Item }) => {
   if (!value) {
     return (

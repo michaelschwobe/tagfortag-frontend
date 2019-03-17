@@ -20,7 +20,7 @@ import TagUpdatePage from './TagUpdatePage';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <App /> component.
+// TODO: Cleanup <App /> component.
 const App = () => (
   <div>
     <nav role="navigation" aria-labelledby="nav-heading">

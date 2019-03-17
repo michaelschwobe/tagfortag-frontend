@@ -1,13 +1,12 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-// Local modules.
+// Components.
 import SignInForm from './SignInForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Render signedin status or form depending on context.
-// TODO: Write <SignInPage /> component.
+// TODO: Update <SignInPage /> with default, failure, success states.
 const SignInPage = () => (
   <div>
     <SignInForm />

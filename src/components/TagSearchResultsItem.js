@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagSearchResultsItem /> component.
+// TODO: Update <TagSearchResultsItem /> component with <Icon type="tag" />.
 const TagSearchResultsItem = ({ id, name, count }) => (
   <li>
     <Link to={`/tags/${id}`}>

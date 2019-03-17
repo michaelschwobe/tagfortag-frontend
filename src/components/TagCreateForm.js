@@ -14,7 +14,7 @@ export const validationSchema = Yup.object().shape({
 // TODO: Replace with `createTag` Mutation.
 export const createTag = (values, actions) => {
   setTimeout(() => {
-    console.log('⚡️ values', JSON.stringify(values, null, 2)); // eslint-disable-line no-console
+    console.log('⚡️ values', JSON.stringify(values, null, 2));
     actions.setSubmitting(false);
   }, 600);
 };
@@ -27,6 +27,7 @@ export const createTag = (values, actions) => {
     react/require-default-props,
     react/default-props-match-prop-types
  */
+// TODO: Update <TagCreateForm /> component with `createTag`.
 const TagCreateForm = ({ initialValues, onSubmit }) => (
   <Formik
     initialValues={initialValues}

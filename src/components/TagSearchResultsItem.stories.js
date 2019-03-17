@@ -9,7 +9,6 @@ import TagSearchResultsItem from './TagSearchResultsItem';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagSearchResultsItem /> stories.
 storiesOf('TagSearchResultsItem', module)
   .addDecorator(withInfo) // Must be first!
   .addDecorator(withKnobs)

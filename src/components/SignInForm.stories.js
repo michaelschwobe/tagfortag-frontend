@@ -9,7 +9,6 @@ import SignInForm from './SignInForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <SignInForm /> stories.
 storiesOf('SignInForm', module)
   .addDecorator(withInfo) // Must be first!
   .addDecorator(withKnobs)

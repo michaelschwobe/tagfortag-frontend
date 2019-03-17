@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Local modules.
+// Components.
 import TagMergeForm from './TagMergeForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagMergePage /> component.
+// TODO: Update <TagMergePage /> with default, failure, success states.
 const TagMergePage = ({ match }) => {
   const { tagId } = match.params;
   const initialValues = { currId: tagId };

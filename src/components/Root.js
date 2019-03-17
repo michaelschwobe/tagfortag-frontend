@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-// Components.
+// Local modules.
 import App from './App';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <Root /> component.
+// TODO: Update <Root /> component with providers.
 const Root = () => (
   <Router>
     <App />

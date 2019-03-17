@@ -9,7 +9,6 @@ import TagCloneForm from './TagCloneForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagCloneForm /> stories.
 storiesOf('TagCloneForm', module)
   .addDecorator(withInfo) // Must be first!
   .addDecorator(withKnobs)

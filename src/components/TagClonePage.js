@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Local modules.
+// Components.
 import TagCloneForm from './TagCloneForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagClonePage /> component.
+// TODO: Update <TagClonePage /> with default, failure, success states.
 const TagClonePage = ({ match }) => {
   const { tagId } = match.params;
   const initialValues = { currId: tagId };

@@ -23,7 +23,7 @@ const getTags = () =>
     count: Math.floor(Math.random() * 30) + 0,
   }));
 
-// TODO: Write <TagSearchPage /> component.
+// TODO: Update <TagSearchPage /> component with `getTags`.
 const TagSearchPage = ({ location }) => {
   // Fetch all tag data.
   const tags = getTags();

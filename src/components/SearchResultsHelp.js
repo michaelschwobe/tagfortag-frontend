@@ -1,9 +1,7 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <SearchResultsHelp /> component.
 const SearchResultsHelp = () => (
   <div>
     <p>Suggestions:</p>
@@ -15,10 +13,6 @@ const SearchResultsHelp = () => (
     </ul>
   </div>
 );
-
-// SearchResultsHelp.propTypes = {};
-
-// SearchResultsHelp.defaultProps = {};
 
 // -----------------------------------------------------------------------------
 

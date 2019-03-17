@@ -1,12 +1,12 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-// Local modules.
+// Components.
 import TagCreateForm from './TagCreateForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagCreatePage /> component.
+// TODO: Update <TagCreatePage /> with default, failure, success states.
 const TagCreatePage = () => (
   <div>
     <TagCreateForm />

@@ -25,4 +25,6 @@ const mapSearchParams = (search = '') => {
   }, {});
 };
 
+// -----------------------------------------------------------------------------
+
 export default mapSearchParams;

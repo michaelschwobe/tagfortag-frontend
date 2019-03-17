@@ -19,7 +19,7 @@ export const validationSchema = Yup.object().shape({
 // TODO: Replace with `signIn` Mutation.
 export const signIn = (values, actions) => {
   setTimeout(() => {
-    console.log('⚡️ values', JSON.stringify(values, null, 2)); // eslint-disable-line no-console
+    console.log('⚡️ values', JSON.stringify(values, null, 2));
     actions.setSubmitting(false);
   }, 600);
 };
@@ -32,6 +32,7 @@ export const signIn = (values, actions) => {
     react/require-default-props,
     react/default-props-match-prop-types
  */
+// TODO: Update <SignInForm /> component with `signIn`.
 const SignInForm = ({ initialValues, onSubmit }) => (
   <Formik
     initialValues={initialValues}

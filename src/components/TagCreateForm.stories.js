@@ -9,7 +9,6 @@ import TagCreateForm from './TagCreateForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <TagCreateForm /> stories.
 storiesOf('TagCreateForm', module)
   .addDecorator(withInfo) // Must be first!
   .addDecorator(withKnobs)

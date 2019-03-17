@@ -9,7 +9,6 @@ import SearchForm from './SearchForm';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <SearchForm /> stories.
 storiesOf('SearchForm', module)
   .addDecorator(withInfo) // Must be first!
   .addDecorator(withKnobs)

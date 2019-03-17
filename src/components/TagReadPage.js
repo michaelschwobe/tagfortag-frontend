@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom';
 // TODO: Write `getTag` query.
 const getTag = tagId => ({
   id: tagId,
-  name: 'tagA',
+  name: 'tagX',
   count: 3,
   createdAt: new Date(Date.now()).toDateString(),
   updatedAt: new Date(Date.now()).toDateString(),
 });
 
-// TODO: Write <TagReadPage /> component.
+// TODO: Update <TagReadPage /> component with `getTag`.
 const TagReadPage = ({ match }) => {
   const { tagId } = match.params;
   const tag = getTag(tagId);
@@ -68,8 +68,6 @@ TagReadPage.propTypes = {
     url: PropTypes.string.isRequired,
   }).isRequired,
 };
-
-// TagReadPage.defaultProps = {};
 
 // -----------------------------------------------------------------------------
 

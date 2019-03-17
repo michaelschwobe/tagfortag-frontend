@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-// Components.
+// Local modules.
 import TagMergePage from './TagMergePage';
 
 // -----------------------------------------------------------------------------

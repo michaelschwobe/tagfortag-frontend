@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // -----------------------------------------------------------------------------
 
-// TODO: Write <SearchForm /> component.
+// TODO: Write <SearchForm /> filters/sorting fields.
 const SearchForm = ({ initialValues, handleTerm, handleReset }) => (
   <div role="search">
     <label htmlFor="term">
@@ -23,11 +23,6 @@ const SearchForm = ({ initialValues, handleTerm, handleReset }) => (
   </div>
 );
 
-/*
-  eslint-disable
-    react/require-default-props,
-    react/default-props-match-prop-types
- */
 SearchForm.propTypes = {
   initialValues: PropTypes.shape({
     term: PropTypes.string,
@@ -36,11 +31,7 @@ SearchForm.propTypes = {
   handleReset: PropTypes.func.isRequired,
 };
 
-SearchForm.defaultProps = {
-  initialValues: {
-    term: '',
-  },
-};
+// SearchForm.defaultProps = {};
 
 // -----------------------------------------------------------------------------
 

@@ -14,7 +14,7 @@ export const validationSchema = Yup.object().shape({
 // TODO: Replace with `updateTag` Mutation.
 export const updateTag = (values, actions) => {
   setTimeout(() => {
-    console.log('⚡️ values', JSON.stringify(values, null, 2)); // eslint-disable-line no-console
+    console.log('⚡️ values', JSON.stringify(values, null, 2));
     actions.setSubmitting(false);
   }, 600);
 };

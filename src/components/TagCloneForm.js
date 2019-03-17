@@ -17,7 +17,7 @@ export const validationSchema = Yup.object().shape({
 // TODO: Replace with `cloneTag` Mutation.
 export const cloneTag = (values, actions) => {
   setTimeout(() => {
-    console.log('⚡️ values', JSON.stringify(values, null, 2)); // eslint-disable-line no-console
+    console.log('⚡️ values', JSON.stringify(values, null, 2));
     actions.setSubmitting(false);
   }, 600);
 };
@@ -30,6 +30,7 @@ export const cloneTag = (values, actions) => {
     react/require-default-props,
     react/default-props-match-prop-types
  */
+// TODO: Update <TagCloneForm /> component with `cloneTag`.
 const TagCloneForm = ({ initialValues, onSubmit }) => (
   <Formik
     initialValues={initialValues}

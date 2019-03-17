@@ -17,7 +17,7 @@ export const validationSchema = Yup.object().shape({
 // TODO: Replace with `mergeTag` Mutation.
 export const mergeTag = (values, actions) => {
   setTimeout(() => {
-    console.log('⚡️ values', JSON.stringify(values, null, 2)); // eslint-disable-line no-console
+    console.log('⚡️ values', JSON.stringify(values, null, 2));
     actions.setSubmitting(false);
   }, 600);
 };
@@ -30,6 +30,7 @@ export const mergeTag = (values, actions) => {
     react/require-default-props,
     react/default-props-match-prop-types
  */
+// TODO: Update <TagMergeForm /> component with `mergeTag`.
 const TagMergeForm = ({ initialValues, onSubmit }) => (
   <Formik
     initialValues={initialValues}
