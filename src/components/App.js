@@ -4,6 +4,7 @@ import { Link, Switch, Redirect, Route } from 'react-router-dom';
 // Pages.
 import BookmarkClonePage from './BookmarkClonePage';
 import BookmarkCreatePage from './BookmarkCreatePage';
+import BookmarkDeletePage from './BookmarkDeletePage';
 import BookmarkMergePage from './BookmarkMergePage';
 import BookmarkReadPage from './BookmarkReadPage';
 import BookmarkSearchPage from './BookmarkSearchPage';
@@ -13,6 +14,7 @@ import SettingsPage from './SettingsPage';
 import SignInPage from './SignInPage';
 import TagClonePage from './TagClonePage';
 import TagCreatePage from './TagCreatePage';
+import TagDeletePage from './TagDeletePage';
 import TagMergePage from './TagMergePage';
 import TagReadPage from './TagReadPage';
 import TagSearchPage from './TagSearchPage';
@@ -67,6 +69,9 @@ const App = () => (
           <Link to="/bookmarks/xxx/merge">BookmarkMergePage</Link>
         </li>
         <li>
+          <Link to="/bookmarks/xxx/delete">BookmarkDeletePage</Link>
+        </li>
+        <li>
           <Link to="/bookmarks/xxx">BookmarkReadPage</Link>
         </li>
         <br />
@@ -84,6 +89,9 @@ const App = () => (
         </li>
         <li>
           <Link to="/tags/xxx/merge">TagMergePage</Link>
+        </li>
+        <li>
+          <Link to="/tags/xxx/delete">TagDeletePage</Link>
         </li>
         <li>
           <Link to="/tags/xxx">TagReadPage</Link>
@@ -117,6 +125,10 @@ const App = () => (
         path="/bookmarks/:bookmarkId/merge"
         component={BookmarkMergePage}
       />
+      <Route
+        path="/bookmarks/:bookmarkId/delete"
+        component={BookmarkDeletePage}
+      />
       <Route path="/bookmarks/:bookmarkId" component={BookmarkReadPage} />
 
       <Route path="/tags" exact component={TagSearchPage} />
@@ -124,6 +136,7 @@ const App = () => (
       <Route path="/tags/:tagId/edit" component={TagUpdatePage} />
       <Route path="/tags/:tagId/clone" component={TagClonePage} />
       <Route path="/tags/:tagId/merge" component={TagMergePage} />
+      <Route path="/tags/:tagId/delete" component={TagDeletePage} />
       <Route path="/tags/:tagId" component={TagReadPage} />
 
       <Route path="/settings" component={SettingsPage} />
