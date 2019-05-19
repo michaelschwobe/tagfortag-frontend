@@ -12,6 +12,7 @@
 
 # Production
 /build
+/storybook-static
 
 # Environments
 .env.local

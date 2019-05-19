@@ -7,110 +7,55 @@
   "author": "Michael Schwobe <mschwobe@gmail.com> (http://michaelschwobe.com)",
   "repository": "github:michaelschwobe/tagfortag-frontend",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint 'src/**/*.js'",
     "test": "react-scripts test",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "formik": "^1.4.1",
+    "formik": "^1.4.4",
     "fuzzaldrin-plus": "^0.6.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.8",
-    "react-test-renderer": "^16.8.5",
-    "yup": "^0.26.6"
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^3.0.1",
+    "yup": "^0.27.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@storybook/addon-actions": "^5.0.5",
-    "@storybook/addon-info": "^5.0.5",
-    "@storybook/addon-knobs": "^5.0.5",
-    "@storybook/addon-links": "^5.0.5",
-    "@storybook/addons": "^5.0.5",
-    "@storybook/react": "^5.0.5",
-    "@storybook/theming": "^5.0.5",
-    "babel-loader": "^8.0.4",
-    "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.7.1",
-    "eslint": "5.12",
+    "@babel/core": "^7.4.4",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-info": "^5.0.11",
+    "@storybook/addon-knobs": "^5.0.11",
+    "@storybook/addon-links": "^5.0.11",
+    "@storybook/addons": "^5.0.11",
+    "@storybook/react": "^5.0.11",
+    "@storybook/theming": "^5.0.11",
+    "babel-loader": "^8.0.6",
+    "eslint": "^4.19.1 || ^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.11.0",
-    "eslint-plugin-react-hooks": "^1.5.0",
-    "prettier": "^1.15.3"
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "jest-dom": "^3.2.2",
+    "prettier": "^1.17.1",
+    "react-testing-library": "^7.0.0"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "jest": true
-    },
-    "extends": [
-      "airbnb",
-      "prettier",
-      "prettier/react"
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ],
-    "plugins": [
-      "import",
-      "jsx-a11y",
-      "react",
-      "react-hooks",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "trailingComma": "all"
-        }
-      ],
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
-      "react/jsx-filename-extension": "off",
-      "react/no-children-prop": "off"
-    },
-    "overrides": [
-      {
-        "files": [
-          "setupTests.js"
-        ],
-        "rules": {
-          "import/no-extraneous-dependencies": "off"
-        }
-      },
-      {
-        "files": [
-          "*.stories.js",
-          "*.test.js"
-        ],
-        "rules": {
-          "import/no-extraneous-dependencies": "off",
-          "react/prop-types": "off"
-        }
-      }
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ]
-  },
-  "eslintIgnore": [
-    "/coverage",
-    "/build",
-    "/public"
-  ],
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all"
   }
 }
